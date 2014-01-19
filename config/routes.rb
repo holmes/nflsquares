@@ -1,6 +1,14 @@
 Nflsquares::Application.routes.draw do
+
+  get "game/index"
+  get "game/:id(.:format)" => 'game#show'
+
+
   root :to => 'assets#index'
   get "assets/index"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
