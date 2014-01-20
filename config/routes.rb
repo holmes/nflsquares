@@ -1,5 +1,8 @@
 Nflsquares::Application.routes.draw do
 
+  resources :players
+  resources :squares
+
   get "game/index"
   get "game/:id(.:format)" => 'game#show'
 
