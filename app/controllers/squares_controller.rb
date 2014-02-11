@@ -1,5 +1,5 @@
 class SquaresController < ApplicationController
-  before_action :set_square, only: [:show, :edit, :update, :destroy]
+  before_action :set_square, only: [:show, :edit, :update, :destroy, :assignPlayer]
 
   # GET /squares
   # GET /squares.json
@@ -35,6 +35,12 @@ class SquaresController < ApplicationController
         format.json { render json: @square.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # POST /square/id/player=1234
+  def assignPlayer(player)
+    @square.player = player
+
   end
 
   # PATCH/PUT /squares/1

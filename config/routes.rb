@@ -6,7 +6,6 @@ Nflsquares::Application.routes.draw do
   get "game/index"
   get "game/:id(.:format)" => 'game#show'
 
-
   root :to => 'assets#index'
   get "assets/index"
 

@@ -1,2 +1,21 @@
 <h1><%=@game.title%> - <%=@game.id%></h1>
-<p>Find me in app/views/game/show.html.erb</p>
+
+<p>There are <%=@game.squares.length%> Squares.
+
+<table>
+	<% for home in (0..9) -%>
+	<tr>
+ 		<% for away in (0..9) -%>
+			<td>
+				<% square = @game.squares[home * 10 + away] -%>
+				<% if square.available -%>
+					Available
+				<% end -%>
+			</td>
+		<% end -%>
+	</tr>
+	<% end -%>
+
+	<% @game.squares.each do |square| -%>
+	<% end -%>
+</table>

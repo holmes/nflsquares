@@ -12,5 +12,4 @@ class GameController < ApplicationController
 	  @game.save
 	  redirect_to @game
 	end
-
 end
